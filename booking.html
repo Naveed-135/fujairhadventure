@@ -159,7 +159,7 @@
             <!-- Row 4: Phone (full width) -->
             <div class="col-span-2">
               <label class="block text-sm  mb-1">Phone Number</label>
-              <input type="text" placeholder="Phone Number" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary" />
+              <input type="tel" placeholder="Phone Number" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary" pattern="[0-9]*" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9]/g,'')" />
             </div>
             <!-- Row 5: Message (full width) -->
             <div class="col-span-2">
