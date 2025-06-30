@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jeju+Myeongjo&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#A85622',
+                        secondary: '#DAD7CB',
+                    },
+                    fontFamily: {
+                        sans: ['Istok Web', 'sans-serif'],
+                    },
+                },
+                container: {
+                    center: true,
+                    padding: {
+                        DEFAULT: '1rem',
+                        sm: '2rem',
+                        lg: '3rem',
+                        xl: '4rem',
+                        '2xl': '5rem',
+                    },
+                },
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <style>
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            display: none !important;
+        }
+
+        .swiper-button-next img,
+        .swiper-button-prev img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+        }
+
+        .top-shadow-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 18px;
+            border-top-left-radius: 0.75rem;
+            border-top-right-radius: 0.75rem;
+            box-shadow: 0 -8px 24px -8px rgba(0, 0, 0, 0.13);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .font-jeju {
+            font-family: 'Jeju Myeongjo', serif;
+        }
+    </style>
+</head>
+
+<body class="font-sans">
+      <!-- navbar -->
+      <nav class="w-full bg-white  py-4 max-sm:py-5">
+        <div class="container mx-auto flex items-center justify-between max-lg:hidden">
+            <!-- Left links -->
+            <div class="flex items-center space-x-8">
+                <a href="/index.html"
+                    class="font-semibold text-sm text-black text-gray-700 hover:text-orange-700 ">Home</a>
+                <a href="/aboutus.html" class="text-sm text-black  hover:text-orange-700">About Us</a>
+                <a href="#" class="text-sm text-gray-700 hover:text-orange-700">Our packages</a>
+                <a href="/activities.html" class="text-sm text-gray-700 hover:text-orange-700">Our Activities</a>
+            </div>
+            <!-- Center logo/title -->
+            <div class="flex flex-col items-center">
+                <img src="/images/logo.svg" alt="logo" class="object-contain">
+            </div>
+            <!-- Right links -->
+            <div class="flex items-center space-x-8">
+                <a href="/booking.html" class="text-sm text-gray-700 hover:text-orange-700">Buy Tickets</a>
+                <a href="#" class="text-sm text-gray-700 hover:text-orange-700">Shop</a>
+                <a href="#" class="text-sm text-gray-700 hover:text-orange-700">Reservations</a>
+                <a href="#" class="text-sm text-gray-700 hover:text-orange-700">Contact Us</a>
+            </div>
+        </div>
+        <div class=" container lg:hidden">
+            <div class="flex justify-between items-center">
+                <img src="/images/logo.svg" alt="logo">
+                <i class="fa-solid fa-bars text-2xl cursor-pointer" id="mobile-menu-button"></i>
+            </div>
+            <!-- Mobile menu (hidden by default) -->
+            <div id="mobile-menu" class="hidden flex-col bg-white  mt-4 text-center p-4 space-y-4">
+                <a href="/index.html" class="block text-gray-700  font-semibold">Home</a>
+                <a href="/aboutus.html" class="block text-black">About Us</a>
+                <a href="#" class="block text-gray-700">Our packages</a>
+                <a href="/activities.html" class="block text-gray-700">Our Activities</a>
+                <a href="/booking.html" class="block text-gray-700">Buy Tickets</a>
+                <a href="#" class="block text-gray-700">Shop</a>
+                <a href="#" class="block text-gray-700">Reservations</a>
+                <a href="#" class="block text-gray-700">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+    <!-- hero section -->
+    <div class="relative bg-[length:100%_100%] max-sm:bg-[length:175%_100%] bg-no-repeat bg-center "
+        style="background-image: url('./images/hero-image.png'); ">
+        <div class="container mx-auto max-sm:h-[70vh]">
+            <div
+                class="relative z-10  mx-auto flex flex-col md:flex-row items-center justify-between py-24  gap-8 max-sm:py-16 max-sm:h-full max-sm:justify-center">
+                <div class="text-white max-w-[439px] mx-auto text-center">
+                    <h1 class="text-6xl font-bold md:mb-5">
+                        About Us</h1>
+                    <p>The official governmental center to activate and regulate adventure tourism in Fujairah
+                        #venture_safely</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- card section -->
+    <section class="container mx-auto py-20 flex flex-col gap-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <!-- Left: Image -->
+            <div class="flex justify-center h-[90%]">
+                <img src="/images/about2.png" alt="Climbing Adventure" class="rounded-xl object-cover w-full " />
+            </div>
+            <!-- Right: Content -->
+            <div>
+                <span class="text-primary text-xl md:text-4xl font-jeju block mb-2">Enjoy Adventure</span>
+                <h2 class="text-2xl md:text-5xl font-bold mb-4">Have A Fun With Our Amazing Camping</h2>
+                <p class=" text-sm md:text-base mb-3">
+                    Welcome to the Reimagined Fujairah Adventure Park – the ultimate destination for thrill seekers and
+                    nature lovers alike. Discover our exciting attractions, including the UAE's tallest giant swing,
+                    thrilling zipline, and tranquil lakeside chalets. There's something for everyone, whether you're
+                    soaring through the skies or unwinding by the water. As the biggest adventure park in the area, we
+                    offer the perfect mix of excitement, fun, and unforgettable experiences. Plan your Adventure today
+                    and create memories that will last a lifetime.
+                </p>
+                <p class=" text-sm md:text-base mb-3">
+                    The cost of camping really does depend on the location, time of year and the facilities on offer
+                    which can vary greatly. From nothing but an empty field and no running water or toilets, to holiday
+                    parks with full entertainment, kids club and swimming pool.
+                </p>
+                <p class=" text-sm md:text-base">
+                    The cost of camping really does depend on the location, time of year and the facilities on offer
+                    which can vary greatly. From nothing but an empty field and no running water or toilets, to holiday
+                    parks with full entertainment, kids club and swimming pool.
+                </p>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <!-- Left: content -->
+            <div class="order-2 lg:order-1">
+                <span class="text-primary text-xl md:text-4xl font-jeju block mb-2">Enjoy Adventure</span>
+                <h2 class="text-2xl md:text-5xl font-bold mb-4">Have A Fun With Our Amazing Camping</h2>
+                <p class="text-sm md:text-base mb-3">
+                    Welcome to the Reimagined Fujairah Adventure Park – the ultimate destination for thrill seekers and
+                    nature lovers alike. Discover our exciting attractions, including the UAE's tallest giant swing,
+                    thrilling zipline, and tranquil lakeside chalets. There's something for everyone, whether you're
+                    soaring through the skies or unwinding by the water. As the biggest adventure park in the area, we
+                    offer the perfect mix of excitement, fun, and unforgettable experiences. Plan your Adventure today
+                    and create memories that will last a lifetime.
+                </p>
+                <p class="text-sm md:text-base mb-3">
+                    The cost of camping really does depend on the location, time of year and the facilities on offer
+                    which can vary greatly. From nothing but an empty field and no running water or toilets, to holiday
+                    parks with full entertainment, kids club and swimming pool.
+                </p>
+                <p class="text-sm md:text-base">
+                    The cost of camping really does depend on the location, time of year and the facilities on offer
+                    which can vary greatly. From nothing but an empty field and no running water or toilets, to holiday
+                    parks with full entertainment, kids club and swimming pool.
+                </p>
+            </div>
+            <!-- Right: image -->
+
+            <div class="flex justify-center h-[90%] order-1 lg:order-2">
+                <img src="/images/about1.png" alt="Climbing Adventure" class="rounded-xl object-cover w-full " />
+            </div>
+        </div>
+    </section>
+
+
+    <!-- activatie section -->
+    <section class="bg-secondary py-20">
+        <div class="container mx-auto">
+            <h2 class="text-2xl md:text-5xl font-bold text-center mb-10">Our Activities</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-10 max-sm:gap-y-6 gap-x-4  ">
+                <!-- Activity 1 -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-primary rounded-full w-20 h-20 flex items-center justify-center mb-3">
+                        <img src="/images/activitie1.svg" alt="Zip line" class="w-12 h-12">
+                    </div>
+                    <span class="text-primary font-bold lg:text-3xl text-center max-sm:text-lg md:text-2xl">Zip line</span>
+                </div>
+                <!-- Activity 2 -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-primary rounded-full w-20 h-20 flex items-center justify-center mb-3">
+                        <img src="/images/activitie2.svg" alt="Giant Swing" class="w-12 h-12">
+                    </div>
+                    <span class="text-primary font-bold lg:text-3xl text-center max-sm:text-lg md:text-2xl">Giant Swing</span>
+                </div>
+                <!-- Activity 3 -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-primary rounded-full w-20 h-20 flex items-center justify-center mb-3">
+                        <img src="/images/activitie3.svg" alt="Archery" class="w-12 h-12">
+                    </div>
+                    <span class="text-primary font-bold lg:text-3xl text-center max-sm:text-lg md:text-2xl">Archery</span>
+                </div>
+                <!-- Activity 4 -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-primary rounded-full w-20 h-20 flex items-center justify-center mb-3">
+                        <img src="/images/activitie4.svg" alt="Kayaking" class="w-12 h-12">
+                    </div>
+                    <span class="text-primary font-bold lg:text-3xl text-center max-sm:text-lg md:text-2xl">Kayaking</span>
+                </div>
+                <!-- Activity 5 -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-primary rounded-full w-20 h-20 flex items-center justify-center mb-3">
+                        <img src="/images/activitie5.svg" alt="Quick Flight" class="w-12 h-12">
+                    </div>
+                    <span class="text-primary font-bold lg:text-3xl text-center max-sm:text-lg md:text-2xl">Quick Flight</span>
+                </div>
+                <!-- Activity 6 -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-primary rounded-full w-20 h-20 flex items-center justify-center mb-3">
+                        <img src="/images/activitie6.svg" alt="Pump Track With BMX" class="w-12 h-12">
+                    </div>
+                    <span class="text-primary font-bold lg:text-3xl text-center max-sm:text-lg md:text-2xl">Pump Track<br>With BMX</span>
+                </div>
+                <!-- Activity 7 -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-primary rounded-full w-20 h-20 flex items-center justify-center mb-3">
+                        <img src="/images/activitie7.svg" alt="Wall Climbing" class="w-12 h-12">
+                    </div>
+                    <span class="text-primary font-bold lg:text-3xl text-center max-sm:text-lg md:text-2xl">Wall Climbing</span>
+                </div>
+                <!-- Activity 8 -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-primary rounded-full w-20 h-20 flex items-center justify-center mb-3">
+                        <img src="/images/activitie8.svg" alt="Bag Jump" class="w-12 h-12">
+                    </div>
+                    <span class="text-primary font-bold lg:text-3xl text-center max-sm:text-lg md:text-2xl">Bag Jump</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- faq section  -->
+    <section class="container mx-auto  py-12 ">
+        <div class="max-w-[80%] max-sm:max-w-[100%] mx-auto">
+            <h2 class="text-4xl font-bold text-primary text-center mb-8">Frequently Asked Questions</h2>
+            <div class="bg-white rounded-2xl shadow-lg p-6 space-y-3" id="faq-accordion">
+                <!-- FAQ 1 -->
+                <div class="rounded overflow-hidden">
+                    <button type="button"
+                        class="w-full flex justify-between items-center px-3 py-2 md:px-6 md:py-4 bg-primary text-white font-bold md:text-lg text-left focus:outline-none faq-toggle rounded-t transition-colors"
+                        data-faq aria-expanded="true">
+                        What is the capacity of your camp?
+                        <span class="faq-icon"><i class="fas fa-minus"></i></span>
+                    </button>
+                    <div class="md:px-6 md:py-4 px-3 py-2 bg-secondary text-primary faq-content">
+                        Maximum 1000 guests.
+                    </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="rounded overflow-hidden">
+                    <button type="button"
+                        class="w-full flex justify-between items-center px-3 py-2 md:px-6 md:py-4 bg-secondary text-black font-bold md:text-lg text-left focus:outline-none faq-toggle transition-colors"
+                        data-faq aria-expanded="false">
+                        How many pick-up locations allowed for a group booking?
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </button>
+                    <div class="md:px-6 md:py-4 px-3 py-2 bg-secondary text-primary faq-content hidden">
+                        You can select up to 3 pick-up locations for a group booking.
+                    </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="rounded overflow-hidden">
+                    <button type="button"
+                        class="w-full flex justify-between items-center px-3 py-2 md:px-6 md:py-4 bg-secondary text-black font-bold md:text-lg text-left focus:outline-none faq-toggle transition-colors"
+                        data-faq aria-expanded="false">
+                        What is the capacity of your land cruiser ? How many person can accommodate a single car ?
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </button>
+                    <div class="md:px-6 md:py-4 px-3 py-2 bg-secondary text-primary faq-content hidden">
+                        Each land cruiser can accommodate up to 6 guests comfortably.
+                    </div>
+                </div>
+                <!-- FAQ 4 -->
+                <div class="rounded overflow-hidden">
+                    <button type="button"
+                        class="w-full flex justify-between items-center px-3 py-2 md:px-6 md:py-4 bg-secondary text-black font-bold md:text-lg text-left focus:outline-none faq-toggle transition-colors"
+                        data-faq aria-expanded="false">
+                        Is it possible not to join the Dune bashing activity?
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </button>
+                    <div class="md:px-6 md:py-4 px-3 py-2 bg-secondary text-primary faq-content hidden">
+                        Yes, you can opt out of the Dune bashing activity if you prefer.
+                    </div>
+                </div>
+                <!-- FAQ 5 -->
+                <div class="rounded overflow-hidden">
+                    <button type="button"
+                        class="w-full flex justify-between items-center px-3 py-2 md:px-6 md:py-4 bg-secondary text-black font-bold md:text-lg text-left focus:outline-none faq-toggle transition-colors"
+                        data-faq aria-expanded="false">
+                        Can we request for a particular dish or dishes?
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </button>
+                    <div class="md:px-6 md:py-4 px-3 py-2 bg-secondary text-primary faq-content hidden">
+                        Yes, you can request specific dishes in advance.
+                    </div>
+                </div>
+                <!-- FAQ 6 -->
+                <div class="rounded overflow-hidden">
+                    <button type="button"
+                        class="w-full flex justify-between items-center px-3 py-2 md:px-6 md:py-4 bg-secondary text-black font-bold md:text-lg text-left focus:outline-none faq-toggle transition-colors"
+                        data-faq aria-expanded="false">
+                        How do I connect with insurance provider?
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </button>
+                    <div class="md:px-6 md:py-4 px-3 py-2 bg-secondary text-primary faq-content hidden">
+                        You will receive insurance provider details after booking confirmation.
+                    </div>
+                </div>
+                <!-- FAQ 7 -->
+                <div class="rounded overflow-hidden">
+                    <button type="button"
+                        class="w-full flex justify-between items-center px-3 py-2 md:px-6 md:py-4 bg-secondary text-black font-bold md:text-lg text-left focus:outline-none faq-toggle transition-colors"
+                        data-faq aria-expanded="false">
+                        How much is the charge for Quad bikes?
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </button>
+                    <div class="md:px-6 md:py-4 px-3 py-2 bg-secondary text-primary faq-content hidden">
+                        Please contact us for the latest Quad bike pricing.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer-->
+    <footer class="bg-primary ">
+        <div class="container mx-auto ">
+            <div class="mx-auto flex justify-between pt-5 pb-12 flex-wrap max-sm:gap-10">
+                <!-- Logo and Description -->
+                <div class="md:max-w-[320px] max-sm:w-full">
+                    <div class="flex items-center gap-2 mb-2">
+                        <img src="./images/footer-logo.svg" alt="Logo" class="w-full  object-cover">
+                    </div>
+                    <p class="font-lg text-white leading-7 font-normal mt-5">Sed ut perspiciatis unde omnis iste natus
+                        error sit voluptatem accusantium doloremque lau</p>
+                </div>
+                <!-- Our Service -->
+                <div class="w-fit">
+                    <h4 class="text-white text-2xl font-semibold leading-6 ">Our Activties</h4>
+                    <img src="./images/underline.svg" alt="underline" class="mt-1.5 mb-6">
+                    <ul class="flex flex-col gap-3 max-sm:gap-2">
+                        <li><a href="#" class="text-white text-lg font-medium leading-normal">Zip line</a></li>
+                        <li><a href="#" class="text-white text-lg font-medium leading-normal">Giant Swing</a></li>
+                        <li><a href="#" class="text-white text-lg font-medium leading-normal">Bag Jump</a>
+                        </li>
+                        <li><a href="#" class="text-white text-lg font-medium leading-normal">Quick Flight</a></li>
+                        <li><a href="#" class="text-white text-lg font-medium leading-normal">Archery</a></li>
+                        <li><a href="#" class="text-white text-lg font-medium leading-normal">Kayaking</a></li>
+                    </ul>
+                </div>
+                <!-- Quick Links -->
+                <div class="w-fit">
+                    <h4 class="text-white text-2xl font-semibold leading-6 ">Quick Links</h4>
+                    <img src="./images/underline.svg" alt="underline" class="mt-1.5 mb-6">
+                    <ul class="flex flex-col gap-3 max-sm:gap-2">
+                        <li><a href="/index.html" class="text-white text-lg font-medium leading-normal">Home</a></li>
+                        <li><a href="/aboutus.html" class="text-white text-lg font-medium leading-normal">About Us</a></li>
+                        <li><a href="#" class="text-white text-lg font-medium leading-normal">Services</a></li>
+                        <li><a href="#" class="text-white text-lg font-medium leading-normal">Packages</a></li>
+                        <li><a href="#" class="text-white text-lg font-medium leading-normal">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- Social Links -->
+                <div class="w-fit max-lg:mx-auto">
+                    <h4 class="text-white text-2xl font-semibold leading-6 ">Follow Us On</h4>
+                    <img src="./images/underline.svg" alt="underline" class="mt-1.5 mb-6">
+                    <div class="flex gap-7">
+                        <img src="./images/face_book-icon.svg" alt="facebook" class="cursor-pointer" />
+                        <img src="./images/instagram-icon.svg" alt="instagram" class="cursor-pointer" />
+                        <img src="./images/twitter-icon.svg" alt="twitter" class="cursor-pointer" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-white/20 mt-6 py-3 text-center text-sm text-white/90">
+            Copyright © 2023 Fujairah Adventures-Park
+        </div>
+    </footer>
+    <!-- script  -->
+<script>
+      // FAQ toggle logic for plus/minus and color
+      document.querySelectorAll('.faq-toggle').forEach((btn, idx) => {
+            btn.addEventListener('click', function () {
+                const allBtns = document.querySelectorAll('.faq-toggle');
+                const allContents = document.querySelectorAll('.faq-content');
+                allBtns.forEach((b, i) => {
+                    if (b !== btn) {
+                        b.classList.remove('bg-primary', 'text-white');
+                        b.classList.add('bg-secondary', 'text-black');
+                        b.setAttribute('aria-expanded', 'false');
+                        b.querySelector('i').classList.remove('fa-minus');
+                        b.querySelector('i').classList.add('fa-plus');
+                        allContents[i].classList.add('hidden');
+                    }
+                });
+                const content = this.nextElementSibling;
+                const icon = this.querySelector('i');
+                if (content.classList.contains('hidden')) {
+                    this.classList.remove('bg-secondary', 'text-black');
+                    this.classList.add('bg-primary', 'text-white');
+                    this.setAttribute('aria-expanded', 'true');
+                    icon.classList.remove('fa-plus');
+                    icon.classList.add('fa-minus');
+                    content.classList.remove('hidden');
+                } else {
+                    this.classList.remove('bg-primary', 'text-white');
+                    this.classList.add('bg-secondary', 'text-black');
+                    this.setAttribute('aria-expanded', 'false');
+                    icon.classList.remove('fa-minus');
+                    icon.classList.add('fa-plus');
+                    content.classList.add('hidden');
+                }
+            });
+        });
+
+   
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', function () {
+            menu.classList.toggle('hidden');
+        });
+    });
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js"></script>
+
+</body>
+
+</html>
